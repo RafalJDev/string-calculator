@@ -41,6 +41,10 @@ class ExpressionValidatorTest extends Specification {
             null  | RuntimeException  | "Input is null!"
             ""    | RuntimeException  | "It's not a correct expression: "
             "3"   | RuntimeException  | "It's not a correct expression: 3"
+            "3 -" | RuntimeException  | "It's not a correct expression: 3 -"
+            "-3 " | RuntimeException  | "It's not a correct expression: -3 "
+            "-3 3" | RuntimeException  | "It's not a correct expression: -3 3"
+            "3 / 0" | RuntimeException  | "Division by 0 is prohibited!"
     }
 
 }

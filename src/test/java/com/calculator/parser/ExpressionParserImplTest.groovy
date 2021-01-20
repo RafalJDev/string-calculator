@@ -1,6 +1,5 @@
 package com.calculator.parser
 
-
 import spock.lang.Specification
 import spock.lang.Unroll
 
